@@ -8,9 +8,16 @@
     <title>Costos</title>
 </head>
 <body>
-    <div class="container">
-      <h1>Calculo de Costos</h1>
-      <div class="harina">
+  <div class="header">
+    <h1>Calculo de Costos</h1>
+    <div class="input">
+      <label for="input-tasa">Tasa en $</label>
+      <input type="text" id="input-tasa" placeholder="Ingresa la tasa..." class="precio">
+    </div>
+  </div>
+  
+    <div class="main">
+      <div class="harina container">
         <h2>Harina de Trigo</h2>
         <label for="harina-precio">Precio por kg</label>
         <input type="text" id="harina-precio" class="precio" placeholder="Precio por kg...">
@@ -19,7 +26,7 @@
         <button class="btn">Calcular Costo</button>
         <p>Costo: <span class="resultado">0</span> BS</p>
       </div>
-      <div class="azucar">
+      <div class="azucar container">
         <h2>Azucar</h2>
         <label for="azucar-precio">Precio por kg</label>
         <input type="text" id="azucar-precio" class="precio" placeholder="Precio por kg...">
@@ -28,7 +35,7 @@
         <button class="btn">Calcular Costo</button>
         <p>Costo: <span class="resultado">0</span> BS</p>
       </div>
-      <div class="mantequilla">
+      <div class="mantequilla container">
         <h2>Mantequilla</h2>
         <label for="mantequilla-precio">Precio por kg</label>
         <input type="text" id="mantequilla-precio" class="precio" placeholder="Precio por kg...">
@@ -37,7 +44,7 @@
         <button class="btn">Calcular Costo</button>
         <p>Costo: <span class="resultado">0</span> BS</p>
       </div>
-      <div class="leche">
+      <div class="leche container">
         <h2>Leche</h2>
         <label for="leche-precio">Precio por kg</label>
         <input type="text" id="leche-precio" class="precio" placeholder="Precio por kg...">
@@ -46,7 +53,7 @@
         <button class="btn">Calcular Costo</button>
         <p>Costo: <span class="resultado">0</span> BS</p>
       </div>
-      <div class="huevo">
+      <div class="huevo container">
         <h2>Huevo</h2>
         <label for="huevo-precio">Precio por 1/2 carton</label>
         <input type="text" id="huevo-precio" class="precio" placeholder="Precio...">
@@ -59,7 +66,14 @@
       
 
       <!-- Total Acumulado -->
-       <h3>Costo total <span id="total-acumulado">0</span> BS</h3>
+      <div class="acumulado container">
+        <h3>Costo total BS</h3>
+        <span id="total-acumulado">0</span>
+      </div>
+      <div class="acumulado-$ container">
+        <h3>Costo total $</h3>
+        <span id="total-divisa">0</span>
+      </div>
     </div>
 </body>
 </html>

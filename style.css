@@ -1,6 +1,84 @@
-.container {
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins&family=Roboto&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000B58;
+}
+
+.input label {
+    font-weight: bold;
+    font-family: 'Poppins';
+    color: #FFF4B7;
+}
+
+.header {
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Poppins';
+    color: #FFF4B7;
+}
+
+.main {
     padding: 10px;
-    border: 1px solid black;
+    font-family: 'Poppins';
+    color: #FFF4B7;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+   padding: 20px;
+   border: 2px solid #003161;
+   margin-bottom:20px;
+   display: flex;
+   flex-direction: column;
+   gap: 12px;
+   border-radius: 7px;
+   justify-content: center;
+   align-items: center;
+}
+
+.precio, .cantidad {
+    padding: 8px 16px;
     border-radius: 9px;
-    margin-bottom: 20px;
+    border: none;
+    background-color: #003161;
+}
+
+.precio::placeholder, .cantidad::placeholder {
+    color: #FFF4B7;
+    opacity: .5;
+}
+
+.btn {
+    padding: 8px 16px;
+    border-radius: 9px;
+    border: none;
+    cursor: pointer;
+    background-color: #006A67;
+    color: #FFF4B7;
+    font-weight: bold;
+}
+
+.resultado {
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+#total-acumulado, #total-divisa {
+    font-size: 2rem;
 }

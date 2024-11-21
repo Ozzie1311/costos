@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', function(){
   const totalAcumulado = document.getElementById('total-acumulado');
+  const totalAcumuladoDivisa = document.getElementById('total-divisa');
   let costoTotal = 0;
 
   const botones = document.querySelectorAll('.btn');
@@ -16,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function(){
         return;
       }
 
-      if(parentDiv.className === 'huevo'){
+      if(parentDiv.className.includes('huevo')){
        const costoUnidad = precio / 15; //costo de la unidad.
        const costoTotalHuevo = costoUnidad * cantidad; //costo Total por la cantidad de huevos.
        resultado.textContent = costoTotalHuevo.toFixed(2);
@@ -28,6 +29,14 @@ document.addEventListener('DOMContentLoaded', function(){
         costoTotal += valor;//Actualizando el valor del costo total.
       }
       totalAcumulado.textContent = costoTotal.toFixed(2);
+      
+
+      const tasaDivisa = parseFloat(document.querySelector('#input-tasa').value);
+      const operacion = costoTotal / tasaDivisa;
+      console.log(costoTotal)
+      console.log(tasaDivisa)
+      totalAcumuladoDivisa.textContent = operacion.toFixed(2);
+
     });
 });
 
