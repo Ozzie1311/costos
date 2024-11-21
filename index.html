@@ -4,18 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="main.js"></script>
+    <script src="main.js" defer></script>
     <title>Costos</title>
 </head>
 <body>
     <h1>Costos para las tortas</h1>
-    <div class="container-harina">
+    <div class="container-harina container">
         <label for="precio-harina">Precio del Harina</label>
         <input type="text" id="precio-harina" placeholder="Precio en bs...">
         <label for="grs-harina">Cantidad de Harina</label>
         <input type="text" id="grs-harina" placeholder="Cantidad en grs...">
         <button class="btn" id="btn-harina">Calcular</button>
         <p class="parrafo-costo">Costo: <span id="costo-harina">0</span> BS</p>
+    </div>
+    <div class="container-azucar container">
+        <label for="precio-azucar">Precio del Azucar</label>
+        <input type="text" id="precio-azucar" placeholder="Precio en bs...">
+        <label for="grs-azucar">Cantidad de Azucar</label>
+        <input type="text" id="grs-azucar" placeholder="Cantidad en grs...">
+        <button class="btn" id="btn-azucar">Calcular</button>
+        <p class="parrafo-costo">Costo: <span id="costo-azucar">0</span> BS</p>
     </div>
 </body>
 </html>

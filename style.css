@@ -1,5 +1,6 @@
-.container-harina {
+.container {
     padding: 10px;
     border: 1px solid black;
     border-radius: 9px;
+    margin-bottom: 20px;
 }
