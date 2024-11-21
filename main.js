@@ -16,18 +16,17 @@ document.addEventListener('DOMContentLoaded', function(){
         return;
       }
 
-      if(parentDiv.className === 'huevo') {
-        const unidades = precio / 15;
-        const precioHue = unidades * cantidad
-        resultado.textContent = precioHue.toFixed(2);
-      } 
-        const gramos = precio / 1000;
-        const valor = gramos * cantidad;
-      
-
-      resultado.textContent = valor.toFixed(2);
-
-      costoTotal += valor;
+      if(parentDiv.className === 'huevo'){
+       const costoUnidad = precio / 15; //costo de la unidad.
+       const costoTotalHuevo = costoUnidad * cantidad; //costo Total por la cantidad de huevos.
+       resultado.textContent = costoTotalHuevo.toFixed(2);
+       costoTotal += costoTotalHuevo; //Actualizando el costo total de los huevos. 
+      } else {
+        const gramos = precio / 1000;//Costo de cada gramo.
+        const valor = gramos * cantidad;//Costo total por KG.
+        resultado.textContent = valor.toFixed(2);
+        costoTotal += valor;//Actualizando el valor del costo total.
+      }
       totalAcumulado.textContent = costoTotal.toFixed(2);
     });
 });
