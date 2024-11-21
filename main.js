@@ -1,28 +1,28 @@
-    let costoTotal = 0;
-    const precioHarina = document.getElementById('precio-harina');
-    const grsHarina = document.getElementById('grs-harina');
-    const btnHarina = document.getElementById('btn-harina');
-    const spanHarina = document.getElementById('costo-harina');
+document.addEventListener('DOMContentLoaded', function(){
+  const totalAcumulado = document.getElementById('total-acumulado');
+  let costoTotal = 0;
 
-    const precioAzucar = document.getElementById('precio-azucar');
-    const grsAzucar = document.getElementById('grs-azucar');
-    const btnAzucar = document.getElementById('btn-azucar');
-    const spanAzucar = document.getElementById('costo-azucar');
+  const botones = document.querySelectorAll('.btn');
+  botones.forEach(boton => {
+    boton.addEventListener('click', function(){
+      const parentDiv = boton.parentElement;
+      const precio = parseFloat(parentDiv.querySelector('.precio').value);
+      const cantidad = parseFloat(parentDiv.querySelector('.cantidad').value);
+      const resultado = parentDiv.querySelector('.resultado');
 
-    btnHarina.addEventListener('click', function(){
-        let costoHarina =  (costoGramo(precioHarina.value) * Number(grsHarina.value)).toFixed(2);
-        costoTotal += Number(costoHarina);
-        console.log(costoTotal);
-        return spanHarina.textContent = costoHarina;
+      if(isNaN(precio) || isNaN(cantidad)){
+        alert('Por favor, ingrese un valor válido');
+        return;
+      }
+
+      const gramos = precio / 1000;
+      const valor = gramos * cantidad;
+
+      resultado.textContent = valor.toFixed(2);
+
+      costoTotal += valor;
+      totalAcumulado.textContent = costoTotal.toFixed(2);
     });
+});
 
-    btnAzucar.addEventListener('click', function(){
-        return spanAzucar.textContent =  (costoGramo(precioAzucar.value) * Number(grsAzucar.value)).toFixed(2)
-    });
-
-
-
-function costoGramo(precio) {
-    let gramos = Number(precio) / 1000;
-    return gramos;
-}
+});

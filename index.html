@@ -8,22 +8,38 @@
     <title>Costos</title>
 </head>
 <body>
-    <h1>Costos para las tortas</h1>
-    <div class="container-harina container">
-        <label for="precio-harina">Precio del Harina</label>
-        <input type="text" id="precio-harina" placeholder="Precio en bs...">
-        <label for="grs-harina">Cantidad de Harina</label>
-        <input type="text" id="grs-harina" placeholder="Cantidad en grs...">
-        <button class="btn" id="btn-harina">Calcular</button>
-        <p class="parrafo-costo">Costo: <span id="costo-harina">0</span> BS</p>
-    </div>
-    <div class="container-azucar container">
-        <label for="precio-azucar">Precio del Azucar</label>
-        <input type="text" id="precio-azucar" placeholder="Precio en bs...">
-        <label for="grs-azucar">Cantidad de Azucar</label>
-        <input type="text" id="grs-azucar" placeholder="Cantidad en grs...">
-        <button class="btn" id="btn-azucar">Calcular</button>
-        <p class="parrafo-costo">Costo: <span id="costo-azucar">0</span> BS</p>
+    <div class="container">
+      <h1>Calculo de Costos</h1>
+      <div class="harina">
+        <h2>Harina de Trigo</h2>
+        <label for="harina-precio">Precio por kg</label>
+        <input type="text" id="harina-precio" class="precio" placeholder="Precio por kg...">
+        <label for="harina-cantidad">Cantidad en grms</label>
+        <input type="text" id="harina-cantidad" class="cantidad" placeholder="Cantidad en grms...">
+        <button class="btn">Calcular Costo</button>
+        <p>Costo: <span class="resultado">0</span> BS</p>
+      </div>
+      <div class="azucar">
+        <h2>Azucar</h2>
+        <label for="azucar-precio">Precio por kg</label>
+        <input type="text" id="azucar-precio" class="precio" placeholder="Precio por kg...">
+        <label for="azucar-cantidad">Cantidad en grms</label>
+        <input type="text" id="azucar-cantidad" class="cantidad" placeholder="Cantidad en grms...">
+        <button class="btn">Calcular Costo</button>
+        <p>Costo: <span class="resultado">0</span> BS</p>
+      </div>
+      <div class="mantequilla">
+        <h2>Mantequilla</h2>
+        <label for="mantequilla-precio">Precio por kg</label>
+        <input type="text" id="mantequilla-precio" class="precio" placeholder="Precio por kg...">
+        <label for="mantequilla-cantidad">Cantidad en grms</label>
+        <input type="text" id="mantequilla-cantidad" class="cantidad" placeholder="Cantidad en grms...">
+        <button class="btn">Calcular Costo</button>
+        <p>Costo: <span class="resultado">0</span> BS</p>
+      </div>
+
+      <!-- Total Acumulado -->
+       <h3>Costo total <span id="total-acumulado">0</span> BS</h3>
     </div>
 </body>
 </html>
